@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>./kyokushindo</title>
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="icons/icon.png" rel="apple-touch-icon" />
+    <link href="icons/icon-72.png" rel="apple-touch-icon" sizes="72x72" />
+    <link href="icons/icon@2x.png" rel="apple-touch-icon" sizes="114X114" />
+    <link href="media/load-screens/phone_portrait.png" rel="apple-touch-startup-image" />
+    <link href="media/load-screens/phone_landscape.png" media="screen and (orientation:landscape)" rel="apple-touch-startup-image" />
+    <link href="media/load-screens/tablet_portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" rel="apple-touch-startup-image" />
+    <link href="media/load-screens/tablet_landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" rel="apple-touch-startup-image" />
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onload="">
+    <div class="ios" id="splash">
+      <div class="spinner"></div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="javascript/dojo/dojo.js"></script>
+    <script src="javascript/toura/AppConfig.js?device_type=phone"></script>
+    <script src="javascript/mulberry/base.js"></script>
+    <script src="javascript/client/base.js"></script>
+    <script src="data/pagedefs.js"></script>
+    <script src="media/manifest.js"></script>
+    <script src="data/tour.js.jet"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+        if(mulberry.Device.environment === 'browser') {
+          var _gaq = _gaq || [];
+        
+          //NOTE: this appears to work fine remaining even when deployed on a server
+          _gaq.push(['_setDomainName', 'none']);
+        
+         (function() {
+           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        }
+      //]]>
+    </script>
+  </body>
+</html>
